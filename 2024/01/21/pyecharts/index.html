@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>pyecharts | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="一、Pyecharts是什么？pyecharts是一个用于生成Echarts图表的类库，利用其中的函数能够很好的实现数据可视化，是Python的可视化库之一。 二、Pyecharts如何安装和使用1、安装Pyecharts：使用pip包管理工具，在命令行中安装 1pip install pyecharts  2、在python编译器中导入Pyecharts12import pyechartsfro">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pyecharts">
+<meta property="og:url" content="https://opwang666.github.io/2024/01/21/pyecharts/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、Pyecharts是什么？pyecharts是一个用于生成Echarts图表的类库，利用其中的函数能够很好的实现数据可视化，是Python的可视化库之一。 二、Pyecharts如何安装和使用1、安装Pyecharts：使用pip包管理工具，在命令行中安装 1pip install pyecharts  2、在python编译器中导入Pyecharts12import pyechartsfro">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-01-21T13:13:40.000Z">
+<meta property="article:modified_time" content="2024-04-10T12:21:28.083Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://opwang666.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-pyecharts" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/01/21/pyecharts/" class="article-date">
+  <time class="dt-published" datetime="2024-01-21T13:13:40.000Z" itemprop="datePublished">2024-01-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      pyecharts
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="一、Pyecharts是什么？"><a href="#一、Pyecharts是什么？" class="headerlink" title="一、Pyecharts是什么？"></a>一、Pyecharts是什么？</h2><p>pyecharts是一个用于生成Echarts图表的类库，利用其中的函数能够很好的实现数据可视化，是Python的可视化库之一。</p>
+<h2 id="二、Pyecharts如何安装和使用"><a href="#二、Pyecharts如何安装和使用" class="headerlink" title="二、Pyecharts如何安装和使用"></a>二、Pyecharts如何安装和使用</h2><h4 id="1、安装Pyecharts："><a href="#1、安装Pyecharts：" class="headerlink" title="1、安装Pyecharts："></a>1、安装Pyecharts：</h4><p>使用pip包管理工具，在命令行中安装</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pyecharts</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、在python编译器中导入Pyecharts"><a href="#2、在python编译器中导入Pyecharts" class="headerlink" title="2、在python编译器中导入Pyecharts"></a>2、在python编译器中导入Pyecharts</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import pyecharts</span><br><span class="line">from pyecharts import charts</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、创建列表对象"><a href="#3、创建列表对象" class="headerlink" title="3、创建列表对象"></a>3、创建列表对象</h4><p>以折线图“中美英三国GDP对比”为例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 创建折线图对象</span><br><span class="line">line = charts.Line()</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、设置图标数据和属性"><a href="#4、设置图标数据和属性" class="headerlink" title="4、设置图标数据和属性"></a>4、设置图标数据和属性</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#X轴数据</span><br><span class="line">line.add_xaxis([&quot;中国&quot;,&quot;美国&quot;,&quot;英国&quot;])</span><br><span class="line"># y轴数据</span><br><span class="line">line.add_yaxis(&quot;GDP&quot;,[30,20,10])</span><br><span class="line">#设置全局配置项</span><br><span class="line">line.set_global_opts(</span><br><span class="line">    title_opts=TitleOpts(title=&quot;GDP展示&quot;)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h4 id="5、渲染图标"><a href="#5、渲染图标" class="headerlink" title="5、渲染图标"></a>5、渲染图标</h4><p>使用渲染方法将图表渲染为 HTML 文件并在浏览器中显示出来</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 通过rander方法，将代码生成为图像</span><br><span class="line">line.render()</span><br></pre></td></tr></table></figure>
+
+<p>这样使在pycharm中自动生成了一个html文件</p>
+<p>接着用任意浏览器打开，</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://opwang666.github.io/2024/01/21/pyecharts/" data-id="clyvk6jux000vi4pph2jo4p4w" data-title="pyecharts" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/01/28/1-22-1-28%E5%91%A8%E6%8A%A5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          1.22-1.28周报
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/01/21/1-15-1-21/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">1.15-1.21</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">June 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">May 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">April 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">March 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">January 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/07/21/2024-07-21%E5%91%A8%E6%8A%A5/">2024-07-21周报</a>
+          </li>
+        
+          <li>
+            <a href="/2024/06/02/java%EF%BC%9A%E6%B3%9B%E5%9E%8B%EF%BC%88%E4%B8%8B%EF%BC%89/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/06/02/JAVA%E8%AF%AD%E8%A8%80/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/06/02/2024-6-2%E5%91%A8%E6%8A%A5/">2024-6-2周报</a>
+          </li>
+        
+          <li>
+            <a href="/2024/05/22/2024-5-26%E5%91%A8%E6%8A%A5/">2024-5-26周报</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

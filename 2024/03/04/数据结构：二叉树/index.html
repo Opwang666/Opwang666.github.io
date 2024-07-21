@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="数据结构：二叉树一，基本概念二叉树（BinaryTree）是每个节点最多有两个子树的树结构。通常子树分为左子树和右子树，如图：   二，特性 在二叉树的第i层上最多有2^(i-1)个节点（i&gt;0）  深度为k的二叉树最多有2^k-1个节点（k&gt;0）  对于任意一颗二叉树，如果度数为0的节点数为a，而度数为2的节点总数为b，则a&#x3D;b+1*(度：一个节点含有的子树的个数称为该节点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://opwang666.github.io/2024/03/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9A%E4%BA%8C%E5%8F%89%E6%A0%91/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="数据结构：二叉树一，基本概念二叉树（BinaryTree）是每个节点最多有两个子树的树结构。通常子树分为左子树和右子树，如图：   二，特性 在二叉树的第i层上最多有2^(i-1)个节点（i&gt;0）  深度为k的二叉树最多有2^k-1个节点（k&gt;0）  对于任意一颗二叉树，如果度数为0的节点数为a，而度数为2的节点总数为b，则a&#x3D;b+1*(度：一个节点含有的子树的个数称为该节点">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200806185805576.png?x-oss-process=">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210319150612530.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTc5NjM4Nw==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="article:published_time" content="2024-03-04T12:53:44.496Z">
+<meta property="article:modified_time" content="2024-03-04T12:53:44.831Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200806185805576.png?x-oss-process=">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://opwang666.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-数据结构：二叉树" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/03/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9A%E4%BA%8C%E5%8F%89%E6%A0%91/" class="article-date">
+  <time class="dt-published" datetime="2024-03-04T12:53:44.496Z" itemprop="datePublished">2024-03-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="数据结构：二叉树"><a href="#数据结构：二叉树" class="headerlink" title="数据结构：二叉树"></a>数据结构：二叉树</h1><h3 id="一，基本概念"><a href="#一，基本概念" class="headerlink" title="一，基本概念"></a>一，基本概念</h3><p>二叉树（BinaryTree）是每个节点<strong>最多</strong>有两个子树的树结构。通常子树分为<code>左子树</code>和<code>右子树</code>，如图：</p>
+<img src="https://img-blog.csdnimg.cn/20200806185805576.png?x-oss-process=" alt="img" style="zoom:25%;" />
+
+<h3 id="二，特性"><a href="#二，特性" class="headerlink" title="二，特性"></a>二，特性</h3><ol>
+<li><p>在二叉树的第i层上最多有2^(i-1)个节点（i&gt;0）</p>
+</li>
+<li><p>深度为k的二叉树最多有2^k-1个节点（k&gt;0）</p>
+</li>
+<li><p>对于任意一颗二叉树，如果度数为0的节点数为a，而度数为2的节点总数为b，则a&#x3D;b+1*(度：一个节点含有的子树的个数称为该节点的度)*</p>
+</li>
+<li><p>具有n个节点的完全二叉树的深度必为：log2(n+1)（<em>以2为底的（n+1）的对数</em>）</p>
+</li>
+<li><p>对于完全二叉树，如果按照从上至下从左至右的数组顺序从0开始编号，对于编号为i的节点：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(1). 若i&gt;0，i 位置节点的双亲序号：(i-1)/2；i=0，i为根节点编号，无双亲节点</span><br><span class="line"></span><br><span class="line">(2). 若 2i+1&lt; n,左孩子序号: 2i+1;否则无左孩子</span><br><span class="line"></span><br><span class="line">(3). 若 2i+2&lt; n,右孩子序号: 2i+2;否则无右孩子</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="三，两种特殊的二叉树"><a href="#三，两种特殊的二叉树" class="headerlink" title="三，两种特殊的二叉树"></a>三，两种特殊的二叉树</h3><h4 id="1，满二叉树："><a href="#1，满二叉树：" class="headerlink" title="1，满二叉树："></a>1，满二叉树：</h4><p>除叶节点外每一个节点都有左右子节点，且叶子结点都处在最底层</p>
+<h4 id="2，完全二叉树："><a href="#2，完全二叉树：" class="headerlink" title="2，完全二叉树："></a>2，完全二叉树：</h4><p>对于深度为K的，有n个结点的二叉树，当且仅当其每一个结点都与深度为K的满二叉树中编号从1至n的结点一一对应时称之为完全二叉树。 <em>满二叉树是一种特殊的完全二叉树。</em></p>
+<p><img src="https://img-blog.csdnimg.cn/20210319150612530.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTc5NjM4Nw==,size_16,color_FFFFFF,t_70#pic_center" alt="img"></p>
+<h3 id="四，二叉树的创建与遍历"><a href="#四，二叉树的创建与遍历" class="headerlink" title="四，二叉树的创建与遍历"></a>四，二叉树的创建与遍历</h3><h5 id="创建："><a href="#创建：" class="headerlink" title="创建："></a>创建：</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"># 节点类</span><br><span class="line">class Node(object):</span><br><span class="line">    def __init__(self, elem, lchild=None, rchild=None):</span><br><span class="line">        self.elem = elem                # 本身值</span><br><span class="line">        self.lchild = lchild            # 左孩子</span><br><span class="line">        self.rchild = rchild            # 右孩子</span><br><span class="line"></span><br><span class="line"># 树类</span><br><span class="line">class BinaryTree(object):</span><br><span class="line">    def __init__(self, root=None):</span><br><span class="line">        self.root = root                                      # root为根节点</span><br><span class="line"></span><br><span class="line">    def add(self, elem):                                      # 为树添加节点</span><br><span class="line">        node = Node(elem)</span><br><span class="line">        if not self.root:                                     #如果树是空的，则对根节点赋值</span><br><span class="line">            self.root = node</span><br><span class="line">        else:</span><br><span class="line">            queue = []</span><br><span class="line">            queue.append(self.root)</span><br><span class="line">            while Ture:                                      #对已有的节点进行层次遍历</span><br><span class="line">                cur = queue.pop(0)</span><br><span class="line">                if not cur.lchild:</span><br><span class="line">                    cur.lchild = node</span><br><span class="line">                    return</span><br><span class="line">                elif not cur.rchild:</span><br><span class="line">                    cur.rchild = node</span><br><span class="line">                    return</span><br><span class="line">                else:</span><br><span class="line">                    queue.append(cur.lchild)</span><br><span class="line">                    queue.append(cur.rchild)</span><br></pre></td></tr></table></figure>
+
+<h5 id="遍历：树的两种重要的遍历模式是深度优先遍历和广度优先遍历，深度优先遍历又分为先序、中序和后序，本文给出广度优先遍历方法"><a href="#遍历：树的两种重要的遍历模式是深度优先遍历和广度优先遍历，深度优先遍历又分为先序、中序和后序，本文给出广度优先遍历方法" class="headerlink" title="遍历：树的两种重要的遍历模式是深度优先遍历和广度优先遍历，深度优先遍历又分为先序、中序和后序，本文给出广度优先遍历方法"></a>遍历：<strong>树的两种重要的遍历模式是深度优先遍历和广度优先遍历</strong>，深度优先遍历又分为先序、中序和后序，本文给出广度优先遍历方法</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">    def breadth_travel(self):                                # 从树的root开始，从上到下从从左到右遍历整个树的节点</span><br><span class="line">        if not self.root:</span><br><span class="line">            return</span><br><span class="line">        queue = []</span><br><span class="line">        queue.append(self.root)</span><br><span class="line">        while queue:</span><br><span class="line">            node = queue.pop(0)</span><br><span class="line">            print(node.elem, end=&quot; &quot;)</span><br><span class="line">            if node.lchild:</span><br><span class="line">                queue.append(node.lchild)</span><br><span class="line">            if node.rchild:</span><br><span class="line">                queue.append(node.rchild)</span><br><span class="line"></span><br><span class="line">if __name__ == &#x27;__main__&#x27;:</span><br><span class="line">    tree = BinaryTree()</span><br><span class="line">    tree.add(0)</span><br><span class="line">    tree.add(1)</span><br><span class="line">    tree.add(2)</span><br><span class="line">    tree.add(3)</span><br><span class="line">    tree.add(4)</span><br><span class="line">    tree.add(5)</span><br><span class="line">    tree.add(6)</span><br><span class="line">    tree.add(7)</span><br><span class="line">    tree.add(8)</span><br><span class="line">    tree.add(9)</span><br><span class="line">    print(&quot;广度优先遍历(层次遍历):&quot;, end=&quot; &quot;)</span><br><span class="line">    tree.breadth_travel()</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">广度优先遍历(层次遍历): 0 1 2 3 4 5 6 7 8 9 </span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://opwang666.github.io/2024/03/04/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9A%E4%BA%8C%E5%8F%89%E6%A0%91/" data-id="clyvk6juz000zi4pp47dz76cv" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2024/03/10/3-10%E5%91%A8%E6%8A%A5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          3-10周报
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2024/03/03/3-3%E5%91%A8%E6%8A%A5/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">3-3周报</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">June 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">May 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">April 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">March 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">January 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2024/07/21/2024-07-21%E5%91%A8%E6%8A%A5/">2024-07-21周报</a>
+          </li>
+        
+          <li>
+            <a href="/2024/06/02/java%EF%BC%9A%E6%B3%9B%E5%9E%8B%EF%BC%88%E4%B8%8B%EF%BC%89/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/06/02/JAVA%E8%AF%AD%E8%A8%80/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2024/06/02/2024-6-2%E5%91%A8%E6%8A%A5/">2024-6-2周报</a>
+          </li>
+        
+          <li>
+            <a href="/2024/05/22/2024-5-26%E5%91%A8%E6%8A%A5/">2024-5-26周报</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
