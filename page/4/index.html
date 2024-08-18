@@ -73,6 +73,60 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-pyecharts" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/01/21/pyecharts/" class="article-date">
+  <time class="dt-published" datetime="2024-01-21T13:13:40.000Z" itemprop="datePublished">2024-01-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/01/21/pyecharts/">pyecharts</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="一、Pyecharts是什么？"><a href="#一、Pyecharts是什么？" class="headerlink" title="一、Pyecharts是什么？"></a>一、Pyecharts是什么？</h2><p>pyecharts是一个用于生成Echarts图表的类库，利用其中的函数能够很好的实现数据可视化，是Python的可视化库之一。</p>
+<h2 id="二、Pyecharts如何安装和使用"><a href="#二、Pyecharts如何安装和使用" class="headerlink" title="二、Pyecharts如何安装和使用"></a>二、Pyecharts如何安装和使用</h2><h4 id="1、安装Pyecharts："><a href="#1、安装Pyecharts：" class="headerlink" title="1、安装Pyecharts："></a>1、安装Pyecharts：</h4><p>使用pip包管理工具，在命令行中安装</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pyecharts</span><br></pre></td></tr></table></figure>
+
+<h4 id="2、在python编译器中导入Pyecharts"><a href="#2、在python编译器中导入Pyecharts" class="headerlink" title="2、在python编译器中导入Pyecharts"></a>2、在python编译器中导入Pyecharts</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import pyecharts</span><br><span class="line">from pyecharts import charts</span><br></pre></td></tr></table></figure>
+
+<h4 id="3、创建列表对象"><a href="#3、创建列表对象" class="headerlink" title="3、创建列表对象"></a>3、创建列表对象</h4><p>以折线图“中美英三国GDP对比”为例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 创建折线图对象</span><br><span class="line">line = charts.Line()</span><br></pre></td></tr></table></figure>
+
+<h4 id="4、设置图标数据和属性"><a href="#4、设置图标数据和属性" class="headerlink" title="4、设置图标数据和属性"></a>4、设置图标数据和属性</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#X轴数据</span><br><span class="line">line.add_xaxis([&quot;中国&quot;,&quot;美国&quot;,&quot;英国&quot;])</span><br><span class="line"># y轴数据</span><br><span class="line">line.add_yaxis(&quot;GDP&quot;,[30,20,10])</span><br><span class="line">#设置全局配置项</span><br><span class="line">line.set_global_opts(</span><br><span class="line">    title_opts=TitleOpts(title=&quot;GDP展示&quot;)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h4 id="5、渲染图标"><a href="#5、渲染图标" class="headerlink" title="5、渲染图标"></a>5、渲染图标</h4><p>使用渲染方法将图表渲染为 HTML 文件并在浏览器中显示出来</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 通过rander方法，将代码生成为图像</span><br><span class="line">line.render()</span><br></pre></td></tr></table></figure>
+
+<p>这样使在pycharm中自动生成了一个html文件</p>
+<p>接着用任意浏览器打开，</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://opwang666.github.io/2024/01/21/pyecharts/" data-id="clyvksvkc000wg8pp91zf01si" data-title="pyecharts" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-1-15-1-21" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/01/21/1-15-1-21/" class="article-date">
@@ -815,6 +869,10 @@
       <ul>
         
           <li>
+            <a href="/2024/08/18/2024-8-18%E5%91%A8%E6%8A%A5/">2024-8-18周报</a>
+          </li>
+        
+          <li>
             <a href="/2024/08/11/2024-08-11%E5%91%A8%E6%8A%A5/">2024-08-11周报</a>
           </li>
         
@@ -828,10 +886,6 @@
         
           <li>
             <a href="/2024/07/21/2024-07-21%E5%91%A8%E6%8A%A5/">2024-07-21周报</a>
-          </li>
-        
-          <li>
-            <a href="/2024/06/02/java%EF%BC%9A%E6%B3%9B%E5%9E%8B%EF%BC%88%E4%B8%8B%EF%BC%89/">(no title)</a>
           </li>
         
       </ul>
