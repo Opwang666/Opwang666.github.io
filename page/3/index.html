@@ -73,6 +73,127 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Python：内置模块argparse" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/04/17/Python%EF%BC%9A%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97argparse/" class="article-date">
+  <time class="dt-published" datetime="2024-04-17T12:25:07.583Z" itemprop="datePublished">2024-04-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Python：内置模块argparse"><a href="#Python：内置模块argparse" class="headerlink" title="Python：内置模块argparse"></a>Python：内置模块argparse</h1><h3 id="argparse是什么？"><a href="#argparse是什么？" class="headerlink" title="argparse是什么？"></a>argparse是什么？</h3><p>argparse 是 <a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=Python&spm=1001.2101.3001.7020">Python</a> 内置的一个用于命令项选项与参数解析的模块，通过在程序中定义好我们需要的参数，argparse 将会从 sys.argv 中解析出这些参数，并自动生成帮助和使用信息。</p>
+<h3 id="argparse如何使用？"><a href="#argparse如何使用？" class="headerlink" title="argparse如何使用？"></a>argparse如何使用？</h3><p>首先来看一看ArgumentParser对象的相关属性</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>解释</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>prog</td>
+<td>程序的名称</td>
+<td>sys.argv</td>
+</tr>
+<tr>
+<td>usage</td>
+<td>描述程序用途的字符串</td>
+<td>自动生成</td>
+</tr>
+<tr>
+<td>description</td>
+<td>在参数帮助文档之前显示的文本</td>
+<td>None</td>
+</tr>
+<tr>
+<td>epliog</td>
+<td>在参数帮助文档之前显示的文本</td>
+<td>None</td>
+</tr>
+<tr>
+<td>parents</td>
+<td>在参数帮助文档之后显示的文本同上一个ArgumentParser对象的列表，它们的参数也应包含在内</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>prefix_chars</td>
+<td>可选参数的前缀字符集合</td>
+<td>‘_’</td>
+</tr>
+<tr>
+<td>formatter_class</td>
+<td>用于自定义帮助文档输出格式的类</td>
+<td>argparse.HelpFormatter</td>
+</tr>
+<tr>
+<td>formfile_prefix_chars</td>
+<td>当需要从文件中读取其他参数时，用于标识文件名的前缀字符集合</td>
+<td>None</td>
+</tr>
+<tr>
+<td>argument_default</td>
+<td>参数的全局默认值</td>
+<td>None</td>
+</tr>
+<tr>
+<td>conflict_handler</td>
+<td>解决冲突选项的策略</td>
+<td>‘error’</td>
+</tr>
+<tr>
+<td>add_help</td>
+<td>为解析器添加一个-h&#x2F;–help 选项</td>
+<td>Ture</td>
+</tr>
+<tr>
+<td>allow_abbrev</td>
+<td>如果缩写是无歧义的，则允许缩写长选项</td>
+<td>Ture</td>
+</tr>
+<tr>
+<td>exit_on_</td>
+<td>决定当错误发生时是否让 ArgumentParser 附带错误信息退出</td>
+<td>Ture</td>
+</tr>
+</tbody></table>
+<p>一次简单的对argparse的使用主要有三个步骤：</p>
+<ol>
+<li>创建ArgumentParser()对象</li>
+<li>调用add_argument()函数添加参数</li>
+<li>使用parse_args()解析添加的参数</li>
+</ol>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#导入argparse模块</span><br><span class="line">import argparse  </span><br><span class="line"># 创建解析器</span><br><span class="line">parser = argparse.ArgumentParser(description=&#x27;desc&#x27;)  </span><br><span class="line"># 添加整型参数</span><br><span class="line">parser.add_argument(&#x27;--integers&#x27;, type=int, default=0, help=&#x27;input an integer&#x27;)</span><br><span class="line"># 解析参数parse_args（）通常不带参数调用，ArgumentParser将自动从sys.argv确定命令行参数。</span><br><span class="line">args = parser.parse_args()</span><br><span class="line">#返回一个具有integers属性的对象 Namespace(integers=0)</span><br><span class="line">print(args)</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Namespace(integers=0)</span><br></pre></td></tr></table></figure>
+
+<p>示例中的add_argument()方法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ArgumentParser.add_argument(name or flags...,</span><br><span class="line">                            action=&#x27;&#x27;,</span><br><span class="line">                            nargs=&#x27;&#x27;,</span><br><span class="line">                            const,</span><br><span class="line">                            default,</span><br><span class="line">                            type,</span><br><span class="line">                            choices,</span><br><span class="line">                            required,</span><br><span class="line">                            help,</span><br><span class="line">                            metavar,</span><br><span class="line">                            dest)</span><br></pre></td></tr></table></figure>
+
+<p>其中的参数：</p>
+<p>add_argument(‘-f’, ‘–foo’) # 可选参数<br>add_argument(‘foo’) # 位置参数<br>action #该action关键字参数指定的命令行参数应该如何处理<br>action &#x3D; ‘store’ # 默认操作仅存储参数的值，可以不写<br>action &#x3D; ‘store_const’ # 将存储由const关键字参数指定的值<br>action &#x3D; ‘store_true’ # 这些是’store_const’分别存储值True和False的情况下使用<br>action &#x3D; ‘store_false’<br>action &#x3D; ‘append’ # 存储一个列表，并将命令行的每个参数值附加到列表中<br>action &#x3D; ‘append_const’ # 存储一个列表，并将const关键字参数指定的值附加到列表中，可用于多个参数需要将常量存储到同一列表，const默认参数为None<br>action &#x3D; ‘count’ # 计算关键字参数出现的次数<br>action &#x3D; ‘extend’ # 存储一个列表，并将每个参数值添加到列表中<br>nargs : 将单个命令行参数与要执行的单个操作相关联，并收集到一个列表中<br>nargs &#x3D; N(一个整数) # nargs&#x3D;2，命令行python test.py –foo a b 将a,b收集到一个列表中<br>nargs &#x3D; ? # 表示从命令行使用一个参数，作为选项参数的值，如果命令行指定了参数的值则使用(python test.py –foo xx)，如果不存在命令行参数(python test.py)，使用default默认值，如果存在可选项参数(python test.py –foo)，但是没有指定参数值，会使用const的值。<br>nargs &#x3D; * # 存在的所有命令行参数都收集到一个列表中<br>nargs &#x3D; + # 跟*用法一样，都会收集到一个列表中，但是如果没有命令行参数则会报错<br>default # 指定默认值<br>type # 指定类型 int float等<br>choices # 指定某些命令行参数应从一组受限制的值中选择，如果参数不是可接受的值一直，则报错<br>required&#x3D;True # 指定参数值为必填<br>help #帮助信息说明</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://opwang666.github.io/2024/04/17/Python%EF%BC%9A%E5%86%85%E7%BD%AE%E6%A8%A1%E5%9D%97argparse/" data-id="clyvksvka000rg8pp5y1509au" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-4-14周报" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/04/10/4-14%E5%91%A8%E6%8A%A5/" class="article-date">
@@ -748,82 +869,6 @@
 
 
   
-    <article id="post-2-18学习周报" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/02/18/2-18%E5%AD%A6%E4%B9%A0%E5%91%A8%E6%8A%A5/" class="article-date">
-  <time class="dt-published" datetime="2024-02-18T12:04:59.000Z" itemprop="datePublished">2024-02-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/02/18/2-18%E5%AD%A6%E4%B9%A0%E5%91%A8%E6%8A%A5/">2.18学习周报</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="计算机天才协会学习周报"><a href="#计算机天才协会学习周报" class="headerlink" title="计算机天才协会学习周报"></a>计算机天才协会学习周报</h1><h3 id="本周学习大纲"><a href="#本周学习大纲" class="headerlink" title="本周学习大纲"></a>本周学习大纲</h3><p>Python：在洛谷做题</p>
-<h3 id="本周学习日历"><a href="#本周学习日历" class="headerlink" title="本周学习日历"></a>本周学习日历</h3><table>
-<thead>
-<tr>
-<th>日期</th>
-<th>学习内容</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>周一</td>
-<td>偷懒没学</td>
-</tr>
-<tr>
-<td>周二</td>
-<td>开始学习，在洛谷刷题</td>
-</tr>
-<tr>
-<td>周三</td>
-<td>Python：洛谷做题</td>
-</tr>
-<tr>
-<td>周四</td>
-<td>Python：洛谷做题</td>
-</tr>
-<tr>
-<td>周五</td>
-<td>Python：洛谷做题</td>
-</tr>
-<tr>
-<td>周六</td>
-<td>Python：洛谷做题</td>
-</tr>
-<tr>
-<td>周日</td>
-<td>Python：洛谷做题</td>
-</tr>
-</tbody></table>
-<h3 id="本周学习总结"><a href="#本周学习总结" class="headerlink" title="本周学习总结"></a>本周学习总结</h3><p>这周主要就是刷题，由于之前做的Python笔记丢失了，做题的时候出现许多困难，几乎没有一次能一次过，也没有能迅速查找到知识点的笔记，其中，格式化似乎是一个重要的知识块。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://opwang666.github.io/2024/02/18/2-18%E5%AD%A6%E4%B9%A0%E5%91%A8%E6%8A%A5/" data-id="clyvksvk00005g8pp3m1pht69" data-title="2.18学习周报" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -860,6 +905,10 @@
       <ul>
         
           <li>
+            <a href="/2024/09/09/2024-9-8%E5%91%A8%E6%8A%A5/">2024-9-8周报</a>
+          </li>
+        
+          <li>
             <a href="/2024/09/01/2024-9-1%E5%91%A8%E6%8A%A5/">2024-9-1周报</a>
           </li>
         
@@ -873,10 +922,6 @@
         
           <li>
             <a href="/2024/08/11/2024-08-11%E5%91%A8%E6%8A%A5/">2024-08-11周报</a>
-          </li>
-        
-          <li>
-            <a href="/2024/08/04/2024-08-04%E5%91%A8%E6%8A%A5/">2024-8-24周报</a>
           </li>
         
       </ul>
