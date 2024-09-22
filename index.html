@@ -73,6 +73,76 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-2024-9-22周报" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/09/22/2024-9-22%E5%91%A8%E6%8A%A5/" class="article-date">
+  <time class="dt-published" datetime="2024-09-22T12:27:49.000Z" itemprop="datePublished">2024-09-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/09/22/2024-9-22%E5%91%A8%E6%8A%A5/">2024-9-22周报</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="计算机天才协会学习周报"><a href="#计算机天才协会学习周报" class="headerlink" title="计算机天才协会学习周报"></a>计算机天才协会学习周报</h1><h3 id="本周学习大纲"><a href="#本周学习大纲" class="headerlink" title="本周学习大纲"></a>本周学习大纲</h3><p>1.计算机二级</p>
+<p>2.六级英语</p>
+<p>3.整理概率论知识点</p>
+<h3 id="本周学习日历"><a href="#本周学习日历" class="headerlink" title="本周学习日历"></a>本周学习日历</h3><table>
+<thead>
+<tr>
+<th>日期</th>
+<th>学习内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>周三</td>
+<td>程序设计集训</td>
+</tr>
+<tr>
+<td>周四</td>
+<td>计算机二级</td>
+</tr>
+<tr>
+<td>周五</td>
+<td>计算机二级</td>
+</tr>
+<tr>
+<td>周六</td>
+<td>休息</td>
+</tr>
+<tr>
+<td>周日</td>
+<td>六级英语、整理概率论知识点、精英大赛前置知识准备</td>
+</tr>
+</tbody></table>
+<h3 id="本周学习总结"><a href="#本周学习总结" class="headerlink" title="本周学习总结"></a>本周学习总结</h3><p>这周假期好多，我也懈怠了，主要就是刷计算机二级题目，另外参加了算法集训营，以及一个关于人工智能的“精英大赛”，时间好紧张，在考虑要不要放弃点东西</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://opwang666.github.io/2024/09/22/2024-9-22%E5%91%A8%E6%8A%A5/" data-id="cm1dk8mlv00006cwq0n5z8z4m" data-title="2024-9-22周报" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-2024-9-15周报" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/09/15/2024-9-15%E5%91%A8%E6%8A%A5/" class="article-date">
@@ -777,94 +847,6 @@
 
 
   
-    <article id="post-java：泛型（下）" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/06/02/java%EF%BC%9A%E6%B3%9B%E5%9E%8B%EF%BC%88%E4%B8%8B%EF%BC%89/" class="article-date">
-  <time class="dt-published" datetime="2024-06-02T06:26:37.982Z" itemprop="datePublished">2024-06-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="泛型方法"><a href="#泛型方法" class="headerlink" title="泛型方法"></a>泛型方法</h3><h4 id="1-泛型方法的定义"><a href="#1-泛型方法的定义" class="headerlink" title="1.泛型方法的定义"></a>1.泛型方法的定义</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public &lt;类型参数&gt; 返回类型 方法名（类型参数 变量名） &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>1)只有在方法签名中声明了&lt; T &gt;的方法才是泛型方法，仅使用了泛型类定义的类型参数的方法并不是泛型方法。</strong></p>
-<pre><code>public class Test&lt;U&gt; &#123;
-    // 该方法只是使用了泛型类定义的类型参数，不是泛型方法
-    public void testMethod(U u)&#123;
-        System.out.println(u);
-    &#125;
-    // 真正的泛型方法
-    public &lt;T&gt; T testMethod1(T t)&#123;
-        return t;
-    &#125;
-&#125;
-</code></pre>
-<p><strong>2）泛型方法中可以同时声明多个类型参数</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">public class TestMethod&lt;U&gt; &#123;</span><br><span class="line">	public &lt;T, S&gt; T testMethod(T t, S s) &#123;</span><br><span class="line">		return null;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>☆3）泛型类中定义的类型参数和泛型方法中定义的类型参数是相互独立的，它们一点关系都没有，泛型方法中也可以使用泛型类中定义的泛型参数。</strong></p>
-<h4 id="2-泛型方法的使用"><a href="#2-泛型方法的使用" class="headerlink" title="2. 泛型方法的使用"></a>2. 泛型方法的使用</h4><ul>
-<li><p>泛型类，在创建类的对象的时候确定类型参数的具体类型；</p>
-</li>
-<li><p>泛型方法，在调用方法的时候再确定类型参数的具体类型。</p>
-</li>
-</ul>
-<p><strong>泛型方法签名中声明的类型参数只能在该方法里使用，而泛型接口、泛型类中声明的类型参数则可以在整个接口、类中使用</strong></p>
-<p><strong>当调用泛型方法时，根据外部传入的实际对象的数据类型，<code>编译器</code>就可以判断出<code>类型参数 T</code>所代表的具体数据类型。</strong></p>
-<h3 id="泛型通配符"><a href="#泛型通配符" class="headerlink" title="泛型通配符"></a>泛型通配符</h3><ul>
-<li>就是“？”，可以在使用泛型时代表一切类型；</li>
-<li>类型通配符是类型实参，而不是类型形参</li>
-</ul>
-<h4 id="使用通配符的情形："><a href="#使用通配符的情形：" class="headerlink" title="使用通配符的情形："></a>使用通配符的情形：</h4><ul>
-<li>例如一个方法定义了&lt; Number &gt;类型，而调用时声明的&lt; Integer &gt;类型（虽然Integer继承Number，所以也没法重写）会报错，这时想支持多种类型，可以用通配符 &lt; ? &gt;；</li>
-<li>&lt; ? &gt; 定义的 用 Object 类型来接收</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public static void show(A&lt;?&gt; B)&#123;</span><br><span class="line">	 Object value = B.getValue();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="通配符的上限"><a href="#通配符的上限" class="headerlink" title="通配符的上限"></a>通配符的上限</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">类/接口 &lt;? extends 实参类型&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>要求该泛型的类型，只能是实参类型，或实参类型的子类类型；</p>
-</li>
-<li><p>这里的实参类型就是泛型的类型的上限</p>
-</li>
-</ul>
-<p>如：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public static void show(Box&lt;? extends Number&gt; box)&#123;</span><br><span class="line">	 Number value = box.getValue();//类型最大为Number</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="通配符的下限"><a href="#通配符的下限" class="headerlink" title="通配符的下限"></a>通配符的下限</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">类/接口 &lt;? super 实参类型&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="泛型的擦出问题和注意事项"><a href="#泛型的擦出问题和注意事项" class="headerlink" title="泛型的擦出问题和注意事项"></a>泛型的擦出问题和注意事项</h3><p><strong>泛型是工作在编译环境里的，一旦程序编译成class文件，class文件中就不存在泛型了，这就是<code>泛型擦除</code></strong></p>
-<p>例如：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 原代码(部分)</span><br><span class="line">ArrayList&lt;String&gt; list =new ArrayList&lt;&gt;();</span><br><span class="line">list.add(&quot;java1&quot;);</span><br><span class="line">list.add(&quot;java2&quot;);</span><br><span class="line">String rs = list.get(2);</span><br><span class="line">System.out.println(rs);</span><br><span class="line"></span><br><span class="line">// 泛型擦除后</span><br><span class="line">ArrayList list =new ArrayList&lt;&gt;();</span><br><span class="line">list.add(&quot;java1&quot;);</span><br><span class="line">list.add(&quot;java2&quot;);</span><br><span class="line">String rs = (String)list.get(2);</span><br><span class="line">System.out.println(rs);</span><br></pre></td></tr></table></figure>
-
-<p><strong>泛型不支持基本数据类型，只支持对象类型（引用数据类型）</strong></p>
-<p>如：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 错误代码</span><br><span class="line">ArrayList&lt;int&gt; list1=new ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">// 正确代码（Interger类就是在对象中包装了一个基本类型为int的值）</span><br><span class="line">ArrayList&lt;Interger&gt; list1=new ArrayList&lt;&gt;();</span><br></pre></td></tr></table></figure>
-
-<p>好了，到这里，关于泛型的知识就大致地了解了，</p>
-<p>再重复一遍泛型的概念：定义类、接口、方法时，同时声明了一个或多个类型变量，称为泛型类、泛型接口、泛型方法，统称为泛型</p>
-<p>作用：提供了在编译阶段约束所能操作的数据类型，并自动检查的能力！可以避免强制类型转换。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://opwang666.github.io/2024/06/02/java%EF%BC%9A%E6%B3%9B%E5%9E%8B%EF%BC%88%E4%B8%8B%EF%BC%89/" data-id="clyvksvkb000ug8pphc5m3j5b" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -901,6 +883,10 @@
       <ul>
         
           <li>
+            <a href="/2024/09/22/2024-9-22%E5%91%A8%E6%8A%A5/">2024-9-22周报</a>
+          </li>
+        
+          <li>
             <a href="/2024/09/15/2024-9-15%E5%91%A8%E6%8A%A5/">2024-9-15周报</a>
           </li>
         
@@ -914,10 +900,6 @@
         
           <li>
             <a href="/2024/08/25/2024-8-25%E5%91%A8%E6%8A%A5/">2024-8-25周报</a>
-          </li>
-        
-          <li>
-            <a href="/2024/08/18/2024-8-18%E5%91%A8%E6%8A%A5/">2024-8-18周报</a>
           </li>
         
       </ul>
