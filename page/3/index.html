@@ -73,6 +73,114 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-列表操作" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/05/01/%E5%88%97%E8%A1%A8%E6%93%8D%E4%BD%9C/" class="article-date">
+  <time class="dt-published" datetime="2024-04-30T16:02:17.073Z" itemprop="datePublished">2024-05-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="list"><a href="#list" class="headerlink" title="list"></a>list</h1><p>列表，是python的一种数据类型，由一系列按特定顺序排列的元素组成。python包含了多种可对列表进行指定操作的函数方法，以下进行一一介绍。<br>1、append(obj)<br>可在list尾部插入指定的元素，使用方法为list.append(obj)。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lst1 = [1,2,3]</span><br><span class="line">lst1.append(4)</span><br><span class="line">print(lst1)   # [1, 2, 3, 4]</span><br></pre></td></tr></table></figure>
+
+
+<p>append会把obj当成一个整体插入至到list当中.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lst1 = [1,2,3]</span><br><span class="line">lst2 =[4,5,6]</span><br><span class="line">lst1.append(lst2)</span><br><span class="line">print(lst1) # [1, 2, 3, [4, 5, 6]]</span><br></pre></td></tr></table></figure>
+
+<p>2、extend(seq)<br>可在list尾部中追加另一序列中的多个值，seq可以为列表，元组，集合和字</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lst1 = [1,2,3]</span><br><span class="line">lst2 =[4,5,6]</span><br><span class="line">lst1.extend(lst2)</span><br><span class="line">print(lst1) # [1, 2, 3, 4, 5, 6]</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lst1 = [1,2,3]</span><br><span class="line">lst3 =&#123;&quot;a&quot;:7,&quot;b&quot;:8&#125;</span><br><span class="line">lst1.extend(lst3)</span><br><span class="line">print(lst1)  # [1, 2, 3, &#x27;a&#x27;, &#x27;b&#x27;]</span><br></pre></td></tr></table></figure>
+
+<p>3、insert(index, obj)<br>在列表指定位置插入元素，使用方法为list.insert(index,obj)。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">lst1 = [1,2,3]</span><br><span class="line">a = lst1.insert(2,8)</span><br><span class="line">print(lst1) # [1, 2, 8, 3]</span><br><span class="line"></span><br><span class="line">lst1 = [1,2,3]</span><br><span class="line">lst2 = &#123;&quot;a&quot;:1,&quot;b&quot;:2&#125;</span><br><span class="line">a = lst1.insert(3,lst2)</span><br><span class="line">print(lst1)   # [1, 2, 3, &#123;&#x27;a&#x27;: 1, &#x27;b&#x27;: 2&#125;]</span><br></pre></td></tr></table></figure>
+
+<p>4、pop(index)<br>删除列表中索引值为index的元素，使用方法为list.pop(index)，index可为空，默认值为-1，即不指定值时删除列表最后一个元素。返回值为删除的元素。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">lst1 = [1,2,3]</span><br><span class="line">lst1.pop()</span><br><span class="line">print(lst1)  # [1, 2]</span><br><span class="line">lst1 = [1,2,3]</span><br><span class="line">lst1.pop(1)</span><br><span class="line">print(lst1)#[1, 3]</span><br></pre></td></tr></table></figure>
+
+<p>index（索引值）在列表中不存在时，抛出IndexError: pop index out of range异常。</p>
+<p>5、remove(obj)<br>删除列表中匹配的元素，使用方法为list.remove(obj)，该方法没有返回值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lst1 = [1,2,3]</span><br><span class="line">re_return = lst1.remove(2)</span><br><span class="line">print(lst1)   # [1, 3]</span><br></pre></td></tr></table></figure>
+
+<p>当列表中包含有多个匹配的元素时，只删除第一个匹配到的元素。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lst1 = [1,2,3,4,2,5,2,6]</span><br><span class="line">re_return = lst1.remove(2)</span><br><span class="line">print(lst1) # [1, 3, 4, 2, 5, 2, 6]</span><br></pre></td></tr></table></figure>
+
+<p>在列表中不存在obj时，抛出异常。</p>
+<p>6、clear()<br>清空列表，该方法没有返回值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">lst1 = [1,2,3]</span><br><span class="line">re_return = lst1.clear()</span><br><span class="line">print(lst1)</span><br><span class="line"></span><br><span class="line">[]</span><br></pre></td></tr></table></figure>
+
+<p>7、index(x[, start[, end]])<br>返回列表中x元素的索引值，start为开始查找的位置，end为结束查找的位置，start与end可为空，此时则在整个列表中查找。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">lst1 = [1,2,3]</span><br><span class="line">index_num = lst1.index(3)</span><br><span class="line">print(index_num)</span><br><span class="line"></span><br><span class="line">2</span><br></pre></td></tr></table></figure>
+
+<p>指定查找开始与结束的位置<br>若找不到对应的元素，则抛出异常，在索引值为0~1的范围内查找不到“3”这个元素，则抛出异常。</p>
+<p>只返回第一次匹配的元素的索引值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">lst1 = [1,2,3,4,3,6]</span><br><span class="line">index_num = lst1.index(3)</span><br><span class="line">print(index_num)</span><br><span class="line"> </span><br><span class="line"> 4</span><br></pre></td></tr></table></figure>
+
+
+<p>8、count(obj)<br>统计某个元素在列表中出现的次数。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">lst1 = [1,2,3,4,3,6,3,7,5,3]</span><br><span class="line">count_num = lst1.count(3)</span><br><span class="line">print(count_num)</span><br><span class="line"></span><br><span class="line">4</span><br><span class="line"></span><br><span class="line">lst1 = [1,2,3,4,3,6,3,7,5,3]</span><br><span class="line">count_num = lst1.count(8)</span><br><span class="line">print(count_num)</span><br><span class="line"></span><br><span class="line">0</span><br></pre></td></tr></table></figure>
+
+
+<p>9、sort(key&#x3D;None, reverse&#x3D;False)<br>对列表进行排序，key为排序的规则，reverse为是否进行降序排列（默认为升序排列），不会生成新的列表，直接在原列表上做改变，使用方法为list.sort()，没有返回值。</p>
+<p>9、sort(key&#x3D;None, reverse&#x3D;False)<br>对列表进行排序，key为排序的规则，reverse为是否进行降序排列（默认为升序排列），不会生成新的列表，直接在原列表上做改变，使用方法为list.sort()，没有返回值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">lst1 = [1,2,4,6,7,5,3]</span><br><span class="line">lst1.sort()</span><br><span class="line">print(lst1)</span><br><span class="line"></span><br><span class="line">[1, 2, 3, 4, 5, 6, 7]</span><br></pre></td></tr></table></figure>
+
+
+<p>key具体可表现为一个函数，即把列表中的元素作为参数传入该函数中，根据函数返回值根据reverse指定的排序方式进行排序。<br>例子：使用列表每个元素中的第二个字符来比较进行排序</p>
+<p>key具体可表现为一个函数，即把列表中的元素作为参数传入该函数中，根据函数返回值根据reverse指定的排序方式进行排序。<br>例子：使用列表每个元素中的第二个字符来比较进行排序</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">lst1 = [&quot;a3&quot;,&quot;c2&quot;,&quot;s7&quot;,&quot;f1&quot;,&quot;r5&quot;]</span><br><span class="line">lst1.sort(key=lambda x:list(x)[1])</span><br><span class="line">print(lst1)</span><br><span class="line"></span><br><span class="line">[&#x27;f1&#x27;, &#x27;c2&#x27;, &#x27;a3&#x27;, &#x27;r5&#x27;, &#x27;s7&#x27;]</span><br></pre></td></tr></table></figure>
+
+
+<p>降序排列</p>
+<p>降序排列</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">lst1 = [&quot;a3&quot;,&quot;c2&quot;,&quot;s7&quot;,&quot;f1&quot;,&quot;r5&quot;]</span><br><span class="line">lst1.sort(key=lambda x:list(x)[1],reverse = True)</span><br><span class="line">print(lst1)</span><br><span class="line"></span><br><span class="line">[&#x27;s7&#x27;, &#x27;r5&#x27;, &#x27;a3&#x27;, &#x27;c2&#x27;, &#x27;f1&#x27;]</span><br></pre></td></tr></table></figure>
+
+
+<p>扩展：<br>sorted(iterable,key&#x3D;None, reverse&#x3D;False)<br>sort一般只应用于列表，sorted可以应用于任何一个可迭代的对象，sorted方法会生成一个新的对象，返回值为排序后的列表，不会影响原对象。<br>不改变原对象的值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">lst1 = [1,3,5,4,9]</span><br><span class="line">lst2 = sorted(lst1)</span><br><span class="line">print(lst1)</span><br><span class="line">print(lst2)</span><br><span class="line"></span><br><span class="line">[1, 3, 5, 4, 9]</span><br><span class="line">[1, 3, 4, 5, 9]</span><br></pre></td></tr></table></figure>
+
+
+<p>对字典进行排序时，默认使用字典元素的键（key）进行排序，并返回一个排序后的列表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">lst1 = &#123;&quot;a&quot;:2,&quot;c&quot;:6,&quot;b&quot;:1&#125;</span><br><span class="line">lst2 = sorted(lst1)</span><br><span class="line">print(lst2)</span><br><span class="line"></span><br><span class="line">[&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]</span><br></pre></td></tr></table></figure>
+
+<p>更多关于sorted函数的用法在此不做扩展，在字典操作函数汇总再作详细描述。</p>
+<p>10、reverse()<br>将原列表进行反向排序，直接改变原列表，没有返回值。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">lst1 = [1,3,5,4,9]</span><br><span class="line">lst1.reverse()</span><br><span class="line">print(lst1)</span><br><span class="line"></span><br><span class="line">[9, 4, 5, 3, 1]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>11、copy()<br>将列表进行浅复制，返回值为复制的新列表。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">lst1 = [1,3,5,7,9]</span><br><span class="line">lst2 = lst1.copy()</span><br><span class="line">print(lst2) # [1, 3, 5, 7, 9]</span><br></pre></td></tr></table></figure>
+
+
+<p>浅复制只复制浅层数据结构，不复制深层数据结构，原列表与复制的新列表会共享深层即子对象，在对任何一个列表子对象进行修改时，会影响另一个列表的子对象内容。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">lst1 = [1,3,5,7,9,[23,45,36]]</span><br><span class="line">lst2 = lst1.copy()</span><br><span class="line">lst2[5][2] = &quot;gg&quot;</span><br><span class="line">print(&quot;lst1:&quot;,lst1)</span><br><span class="line">print(&quot;lst2:&quot;,lst2)</span><br><span class="line">lst1: [1, 3, 5, 7, 9, [23, 45, &#x27;gg&#x27;]]</span><br><span class="line">lst2: [1, 3, 5, 7, 9, [23, 45, &#x27;gg&#x27;]]</span><br></pre></td></tr></table></figure>
+
+
+<p>只修改浅层数据时，不会影响到原列表</p>
+<p>只修改浅层数据时，不会影响到原列表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">lst1 = [1,3,5,7,9,[23,45,36]]</span><br><span class="line">lst2 = lst1.copy()</span><br><span class="line">lst2[2] = &quot;gg&quot;</span><br><span class="line">print(&quot;lst1:&quot;,lst1)</span><br><span class="line">print(&quot;lst2:&quot;,lst2)lst1: [1, 3, 5, 7, 9, [23, 45, 36]]</span><br><span class="line">lst2: [1, 3, &#x27;gg&#x27;, 7, 9, [23, 45, 36]]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://opwang666.github.io/2024/05/01/%E5%88%97%E8%A1%A8%E6%93%8D%E4%BD%9C/" data-id="clyvksvkg000zg8ppgcej3vqc" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-4-28周报" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/04/28/4-28%E5%91%A8%E6%8A%A5/" class="article-date">
@@ -841,83 +949,6 @@
 
 
   
-    <article id="post-3-10周报" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/03/10/3-10%E5%91%A8%E6%8A%A5/" class="article-date">
-  <time class="dt-published" datetime="2024-03-10T08:02:12.000Z" itemprop="datePublished">2024-03-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/03/10/3-10%E5%91%A8%E6%8A%A5/">3-10周报</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="计算机天才协会学习周报"><a href="#计算机天才协会学习周报" class="headerlink" title="计算机天才协会学习周报"></a>计算机天才协会学习周报</h1><h3 id="本周学习大纲"><a href="#本周学习大纲" class="headerlink" title="本周学习大纲"></a>本周学习大纲</h3><p>1.PTA刷题</p>
-<p>2.学习python爬虫</p>
-<h3 id="本周学习日历"><a href="#本周学习日历" class="headerlink" title="本周学习日历"></a>本周学习日历</h3><table>
-<thead>
-<tr>
-<th>日期</th>
-<th>学习内容</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>周一</td>
-<td>在PTA刷题，更新一篇技术性文稿（二叉树）</td>
-</tr>
-<tr>
-<td>周二</td>
-<td>PTA刷题</td>
-</tr>
-<tr>
-<td>周三</td>
-<td>PTA刷题，参加选拔赛</td>
-</tr>
-<tr>
-<td>周四</td>
-<td>休息一天</td>
-</tr>
-<tr>
-<td>周五</td>
-<td>解决掉作业</td>
-</tr>
-<tr>
-<td>周六</td>
-<td>出去玩，参加漫展</td>
-</tr>
-<tr>
-<td>周日</td>
-<td>学习爬虫，</td>
-</tr>
-</tbody></table>
-<h3 id="本周学习总结"><a href="#本周学习总结" class="headerlink" title="本周学习总结"></a>本周学习总结</h3><p>为天梯赛校内选拔赛尽力练习了，结果虽然成绩也不太好，但是在某些点上也算有一点进步，比如在比赛时“灵光一闪”运用了递归的思想，拿到了更多分数。另，在听说统计建模大赛之后，也准备参加，所以开始学习爬虫。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://opwang666.github.io/2024/03/10/3-10%E5%91%A8%E6%8A%A5/" data-id="clyvksvk8000mg8ppaizycqsx" data-title="3-10周报" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -941,7 +972,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">September 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">August 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">June 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">May 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">April 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">March 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">January 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/10/">October 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/09/">September 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/08/">August 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/07/">July 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/06/">June 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/05/">May 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/04/">April 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">March 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">February 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/01/">January 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/12/">December 2023</a></li></ul>
     </div>
   </div>
 
@@ -952,6 +983,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/10/13/2024-10-13%E5%91%A8%E6%8A%A5/">2024-10-13周报</a>
+          </li>
         
           <li>
             <a href="/2024/09/29/2024-9-29%E5%91%A8%E6%8A%A5/">2024-9-29周报</a>
@@ -967,10 +1002,6 @@
         
           <li>
             <a href="/2024/09/09/2024-9-8%E5%91%A8%E6%8A%A5/">2024-9-8周报</a>
-          </li>
-        
-          <li>
-            <a href="/2024/09/01/2024-9-1%E5%91%A8%E6%8A%A5/">2024-9-1周报</a>
           </li>
         
       </ul>
