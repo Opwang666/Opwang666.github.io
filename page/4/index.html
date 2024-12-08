@@ -73,6 +73,106 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Python：字符串常见操作" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/04/24/Python%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/" class="article-date">
+  <time class="dt-published" datetime="2024-04-24T08:49:02.699Z" itemprop="datePublished">2024-04-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="Python：字符串常见操作"><a href="#Python：字符串常见操作" class="headerlink" title="Python：字符串常见操作"></a>Python：字符串常见操作</h1><p><strong>字符串</strong>是字符的序列，我们能在几乎每一个Python程序中找到它的踪影，我们往往需要对字符串进行各种操作以达到目的。那么本期，我将介绍一些常见的字符串操作，能够满足大部分字符串操作情况</p>
+<h4 id="1-join串联多个字符串。"><a href="#1-join串联多个字符串。" class="headerlink" title="1 join串联多个字符串。"></a>1 join串联多个字符串。</h4><p>利用join函数，我们可以将列表中的字符串元素串联起来，如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chars = [&#x27;P&#x27;,&#x27;y&#x27;, &#x27;t&#x27;, &#x27;h&#x27;, &#x27;o&#x27;, &#x27;n&#x27;]</span><br><span class="line">name = &#x27;&#x27;.join(chars)   # name==&quot;Python&quot;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-字符串分割函数。"><a href="#2-字符串分割函数。" class="headerlink" title="2 字符串分割函数。"></a>2 字符串分割函数。</h4><p>split()方法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">str.split(str=&quot;&quot;,num=string.count(str))</span><br></pre></td></tr></table></figure>
+
+<p>str:表示为分隔符，默认为空格，但是不能为空(’’)<br>num:表示分割次数。如果存在参数num，则仅分隔成 num+1 个子字符串，并且每一个子字符串可以赋给新的变量。默认为 -1, 即分隔所有。</p>
+<p>比如，将”happy,sad,cool“以”，“做一次分割：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a=&#x27;happy,sad,cool&#x27;.split(&#x27;,&#x27;,1)  # a==[&#x27;happy&#x27;,&#x27;sad,cool&#x27;]</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-把-string-中的-str1-替换成-str2-如果-num-指定，则替换不超过-num-次。"><a href="#3-把-string-中的-str1-替换成-str2-如果-num-指定，则替换不超过-num-次。" class="headerlink" title="3 把 string 中的 str1 替换成 str2,如果 num 指定，则替换不超过 num 次。"></a>3 把 string 中的 str1 替换成 str2,如果 num 指定，则替换不超过 num 次。</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string.replace(str1,str2,num=string.count(str1))</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-检查字符串是否是以-“x”开头或结尾，是则返回-True，否则返回-False。"><a href="#4-检查字符串是否是以-“x”开头或结尾，是则返回-True，否则返回-False。" class="headerlink" title="4 检查字符串是否是以 “x”开头或结尾，是则返回 True，否则返回 False。"></a>4 检查字符串是否是以 “x”开头或结尾，是则返回 True，否则返回 False。</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 检查字符串是否以&quot;x&quot;开始，如果是，返回 True,否则返回 False.</span><br><span class="line">string.startswith(x, beg=0,end=len(string))</span><br><span class="line"></span><br><span class="line"># 检查字符串是否以 obj 结束，如果是，返回 True,否则返回 False</span><br><span class="line">string.startswith(x, beg=0,end=len(string))</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-capitalize-把字符串的第一个字符大写。"><a href="#5-capitalize-把字符串的第一个字符大写。" class="headerlink" title="5 capitalize()把字符串的第一个字符大写。"></a>5 capitalize()把字符串的第一个字符大写。</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string.capitalize()</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-判断字符串内容的几个函数。"><a href="#6-判断字符串内容的几个函数。" class="headerlink" title="6 判断字符串内容的几个函数。"></a>6 判断字符串内容的几个函数。</h4><p>1、如果 string 至少有一个字符并且所有字符都是字母或数字则返，回 True,否则返回 False</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string.isalnum()</span><br></pre></td></tr></table></figure>
+
+<p>2、如果 string 至少有一个字符并且所有字符都是字母则返回 True, 否则返回 False</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string.isalpha()</span><br></pre></td></tr></table></figure>
+
+<p>3、string 是否只包含数字</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string.isdigit()</span><br></pre></td></tr></table></figure>
+
+<p>4、string 是否只包含十进制数字</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string.isdecimal()</span><br></pre></td></tr></table></figure>
+
+<p>5、 string 中是否只有小写（大写）字母</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 小写</span><br><span class="line">string.islower()</span><br><span class="line"># 大写</span><br><span class="line">string.isupper()</span><br></pre></td></tr></table></figure>
+
+<p>6、string中是否只包含数字字符</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string.isnumeric()</span><br></pre></td></tr></table></figure>
+
+<p>7、string中是否只包含空格</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string.isspace()</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-字符串索引查询函数"><a href="#7-字符串索引查询函数" class="headerlink" title="7 字符串索引查询函数"></a>7 字符串索引查询函数</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 检测 str 是否包含在 string 中，</span><br><span class="line">如果 beg 和 end 指定范围，则检查是否包含在指定范围内</span><br><span class="line">string.find(str, beg=0, end=len(string))</span><br><span class="line"># 类似于 find() 函数，返回字符串最后一次出现的位置，如果没有匹配项则返回 -1。</span><br><span class="line">string.rfind(str, beg=0,end=len(string) )</span><br><span class="line"># 跟find()方法一样，只不过如果str不在 string中会报一个异常。</span><br><span class="line">string.index(str, beg=0, end=len(string))</span><br><span class="line"># 类似于 index()，不过是返回最后一个匹配到的子字符串的索引号</span><br><span class="line">string.rindex( str, beg=0,end=len(string))</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-统计字符串中内容出现次数"><a href="#8-统计字符串中内容出现次数" class="headerlink" title="8 统计字符串中内容出现次数"></a>8 统计字符串中内容出现次数</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">string.count(str, beg=0, end=len(string))</span><br><span class="line">返回 str 在 string 里面出现的次数，</span><br><span class="line">如果 beg 或者 end 指定则返回指定范围内 str 出现的次数</span><br></pre></td></tr></table></figure>
+
+<h4 id="9-返回最小值或最大值"><a href="#9-返回最小值或最大值" class="headerlink" title="9 返回最小值或最大值"></a>9 返回最小值或最大值</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 返回字符串 str 中最大的字母</span><br><span class="line">max(str)</span><br><span class="line"># 返回字符串 str 中最小的字母</span><br><span class="line">min(str)</span><br></pre></td></tr></table></figure>
+
+<h4 id="10-字符串中字母大小写转换"><a href="#10-字符串中字母大小写转换" class="headerlink" title="10 字符串中字母大小写转换"></a>10 字符串中字母大小写转换</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 把所有字母转换为小写</span><br><span class="line">string.lower()</span><br><span class="line"># 把所有字母转换为大写</span><br><span class="line">string.upper()</span><br><span class="line"># 翻转string中的大小写</span><br><span class="line">string.swapcase()</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="11-字符串删去开头结尾"><a href="#11-字符串删去开头结尾" class="headerlink" title="11 字符串删去开头结尾"></a>11 字符串删去开头结尾</h4><p>1、删去开头和结尾指定字符（默认为空格）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string.strip(x)</span><br></pre></td></tr></table></figure>
+
+<p>2、删除 string 末尾</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string.rstrip(x)</span><br></pre></td></tr></table></figure>
+
+<p>3、删除string开头</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string.lstrip(x)</span><br></pre></td></tr></table></figure>
+
+<h4 id="13-对齐函数"><a href="#13-对齐函数" class="headerlink" title="13 对齐函数"></a>13 对齐函数</h4><p>1、返回一个原字符串（string）右对齐,并使用空格填充至长度 width 的新字符串</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string.rjust(width)</span><br></pre></td></tr></table></figure>
+
+<p>2、返回一个原字符串左对齐,并使用空格填充至长度 width 的新字符串</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string.ljust(width)</span><br></pre></td></tr></table></figure>
+
+<p>3、返回长度为 width 的字符串，原字符串 string 右对齐，前面填充0</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string.zfill(width)</span><br></pre></td></tr></table></figure>
+
+<p>4、返回一个原字符串居中,并使用空格填充至长度 width 的新字符串</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">string.center(width)</span><br></pre></td></tr></table></figure>
+
+<h4 id="14-格式化字符串"><a href="#14-格式化字符串" class="headerlink" title="14 格式化字符串"></a>14 格式化字符串</h4><p>三种格式化输出format</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">s12_1 = &#x27;我叫&#123;&#125;,今年&#123;&#125;岁，爱好&#123;&#125;,再说一下我叫&#123;&#125;&#x27;.format(&#x27;小明&#x27;,18,&#x27;学习&#x27;,&#x27;小明&#x27;)</span><br><span class="line"></span><br><span class="line">s12_2 = &#x27;我叫&#123;0&#125;,今年&#123;1&#125;岁，爱好&#123;2&#125;,再说一下我叫&#123;0&#125;&#x27;.format(&#x27;小明&#x27;,18,&#x27;学习&#x27;)</span><br><span class="line"></span><br><span class="line">s12_3 = s1 = &#x27;我叫&#123;name&#125;,今年&#123;age&#125;岁，爱好&#123;hobby&#125;,再说一下我叫&#123;name&#125;&#x27;.format(name = &#x27;小明&#x27;,age = 18,hobby = &#x27;学习&#x27;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://opwang666.github.io/2024/04/24/Python%EF%BC%9A%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/" data-id="clyvksvka000sg8ppdgnlehsr" data-title="" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-4-21周报" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/04/21/4-21%E5%91%A8%E6%8A%A5/" class="article-date">
@@ -793,84 +893,6 @@
 
 
   
-    <article id="post-3-3周报" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/03/03/3-3%E5%91%A8%E6%8A%A5/" class="article-date">
-  <time class="dt-published" datetime="2024-03-03T13:18:46.000Z" itemprop="datePublished">2024-03-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/03/03/3-3%E5%91%A8%E6%8A%A5/">3-3周报</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="计算机天才协会学习周报"><a href="#计算机天才协会学习周报" class="headerlink" title="计算机天才协会学习周报"></a>计算机天才协会学习周报</h1><h3 id="本周学习大纲"><a href="#本周学习大纲" class="headerlink" title="本周学习大纲"></a>本周学习大纲</h3><p>Python：在PTA做题</p>
-<p>学开车</p>
-<h3 id="本周学习日历"><a href="#本周学习日历" class="headerlink" title="本周学习日历"></a>本周学习日历</h3><table>
-<thead>
-<tr>
-<th>日期</th>
-<th>学习内容</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>周一</td>
-<td>Python：PTA刷题</td>
-</tr>
-<tr>
-<td>周二</td>
-<td>Python：PTA刷题</td>
-</tr>
-<tr>
-<td>周三</td>
-<td>Python：PTA刷题</td>
-</tr>
-<tr>
-<td>周四</td>
-<td>Python：PTA刷题</td>
-</tr>
-<tr>
-<td>周五</td>
-<td>Python：PTA刷题</td>
-</tr>
-<tr>
-<td>周六</td>
-<td>Python：PTA刷题，去驾校练车</td>
-</tr>
-<tr>
-<td>周日</td>
-<td>Python：PTA刷题</td>
-</tr>
-</tbody></table>
-<h3 id="本周学习总结"><a href="#本周学习总结" class="headerlink" title="本周学习总结"></a>本周学习总结</h3><p>为天梯赛做准备，虽然入队希望不大，但是还是尽力刷题，主要就是在PTA上刷题，一周下来，L1部分完成一半了，其中，然后稍微了解了一下”贪心算法“</p>
-<p>也记住了几个忘记了的函数</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://opwang666.github.io/2024/03/03/3-3%E5%91%A8%E6%8A%A5/" data-id="clyvksvk6000ig8ppcfu93j52" data-title="3-3周报" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -907,7 +929,11 @@
       <ul>
         
           <li>
-            <a href="/2024/12/01/2024-12-1%E5%91%A8%E6%8A%A5/">2024-12-1</a>
+            <a href="/2024/12/08/2024-12-8%E5%91%A8%E6%8A%A5/">2024-12-8周报</a>
+          </li>
+        
+          <li>
+            <a href="/2024/12/01/2024-12-1/">2024-12-1</a>
           </li>
         
           <li>
@@ -920,10 +946,6 @@
         
           <li>
             <a href="/2024/11/10/2024-11-10%E5%91%A8%E6%8A%A5/">2024-11-10周报</a>
-          </li>
-        
-          <li>
-            <a href="/2024/11/03/2024-11-3%E5%91%A8%E6%8A%A5/">2024-11-3周报</a>
           </li>
         
       </ul>
